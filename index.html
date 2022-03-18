@@ -29,7 +29,7 @@
     <!------------------------------------------------ ----- ------------------------------------------------>
     <!------------------------------------------------ ----- ------------------------------------------------>
 
-    <div class="container" id="loginSector" style="display: none;">
+    <div class="container" id="loginSector">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -60,14 +60,15 @@
                                                 Me</label>
                                             </div>
                                         </div>
-                                        <button id="login_id" onclick="IsRememberMe()" class="btn btn-primary btn-user btn-block">
+                                   
+                                    </form>
+                                    <button id="login_id" onclick="IsRememberMe()" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </button>
 
-                                    </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small"  id="forgetPassword">Forgot Password?</a>
                                     </div>
 
                                 </div>
@@ -81,7 +82,7 @@
         </div>
 
     </div>
-    <div class="container" id="forgetpasswordSector" style="display: none;">
+    <div class="container collapse" id="forgetpasswordSector" >
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -103,16 +104,16 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                         </div>
-                                        <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="" class="btn btn-primary btn-user btn-block">
                                         Reset Password
                                     </a>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" >Create an Account!</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="login.html">Already have an account? Login!</a>
+                                        <a class="small" id="loginBtn">Already have an account? Login!</a>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +127,7 @@
 
     </div>
 
-    <div id="dashboardSector">
+    <div class="collapse" id="dashboardSector">
         <div id="wrapper">
 
             <!-- Sidebar -->
@@ -144,8 +145,8 @@
                 <hr class="sidebar-divider my-0">
 
                 <!-- Nav Item - Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="session-info.html">
+                <li class="nav-item leftside active">
+                    <a class="nav-link" data-id="#sessioninfoTap">
                         <i class="fa-solid fa-circle-info"></i>
                         <span>Session Info</span></a>
                 </li>
@@ -153,36 +154,36 @@
 
 
                 <!-- Nav Item - Charts -->
-                <li class="nav-item">
-                    <a class="nav-link" href="Certification.html">
+                <li class="nav-item leftside">
+                    <a class="nav-link" data-id="#certificationTap">
                         <i class="fa-solid fa-certificate"></i>
                         <span>Certification</span></a>
                 </li>
 
                 <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    <a class="nav-link" href="road-map.html">
+                <li class="nav-item leftside">
+                    <a class="nav-link" data-id="#roadmapTap">
                         <i class="fa-solid fa-map-location-dot"></i>
                         <span>Roadmap</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="packages.html">
+                <li class="nav-item leftside">
+                    <a class="nav-link" data-id="#packagesTap">
                         <i class="fa-solid fa-shapes"></i>
                         <span>Packages</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link " href="overview.html">
+                <li class="nav-item leftside ">
+                    <a class="nav-link " data-id="#overviewTap">
                         <i class="fa-solid fa-house"></i>
                         <span>Overview</span></a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="feedback.html">
+                <li class="nav-item leftside">
+                    <a class="nav-link" data-id="#feedbackTap">
                         <i class="fa-solid fa-star"></i>
                         <span>Feedback</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="finance.html">
+                <li class="nav-item leftside">
+                    <a class="nav-link" data-id="#financeTap">
                         <i class="fa-solid fa-coins"></i>
                         <span>Finance</span></a>
                 </li>
@@ -254,7 +255,7 @@
                     <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -|- -- -- -- -- -- -- -- -- -- -- -- -- --->
                     <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -V- -- -- -- -- -- -- -- -- -- -- -- -- --->
                     <div class="container-fluid">
-                        <div id="sessioninfoTap" style="display:none;">
+                        <div id="sessioninfoTap" >
                             <div class="card shadow mb-4">
                                 <!-- <div class="card-header py-3 bg-primary">
 
@@ -325,7 +326,7 @@
 
                             <!-- End of Footer -->
                         </div>
-                        <div class="row" id="certificationTap" style="display:none;">
+                        <div class="row" id="certificationTap" >
                             <div class="col card shadow mb-4">
                                 <div class="card-body cert-body">
                                     <table class="table">
@@ -380,7 +381,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="cards-container" id="roadmapTap" style="display:none;">
+                        <div class="cards-container" id="roadmapTap" >
                             <div class="card border-bottom-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <img src="img/elements-11.svg" alt="">
@@ -454,7 +455,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="packages-container monthly" id="packagesTap" style="display:none;">
+                        <div class="packages-container monthly" id="packagesTap">
                             <div class="package-comp monthly">
                                 <div class="package-title">Monthly Plan</div>
                                 <div class="package-body">
@@ -582,7 +583,7 @@
 
                             </div>
                         </div>
-                        <div id="overviewTap" style="display:none;">
+                        <div id="overviewTap">
                             <div class="row">
 
                                 <div class="col-lg-6">
@@ -648,7 +649,7 @@
                             </div>
 
                         </div>
-                        <div id="feedbackTap" style="display:none;">
+                        <div id="feedbackTap">
                             <table class="feedbacktable">
                                 <thead>
                                     <tr>
@@ -768,50 +769,83 @@
 
                                         </tbody>
                                     </table>
+                                    <nav aria-label="..." class="pagination-center">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item ">
+                                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                                 <div class="tab-pane fade" id="Installments" role="tabpanel" aria-labelledby="Installments-tab">
                                     <table class="table-resp">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Student Name</th>
-                                                <th scope="col">Qouta</th>
-                                                <th scope="col">Used</th>
-                                                <th scope="col">Remain</th>
-                                                <th scope="col">Status</th>
+                                                <th scope="col">Description</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">Pay</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td data-label="Student Name" scope="col">Student Name</td>
-                                                <td data-label="Qouta" scope="col">50 Session/s</td>
-                                                <td data-label="Used" scope="col">30 Session/s</td>
-                                                <td data-label="Remain" scope="col">20 Session/s</td>
-                                                <td data-label="Status" scope="col">Active</td>
+                                                <td data-label="Description" scope="col">Description</td>
+                                                <td data-label="Date" scope="col">20/10/2022</td>
+                                                <td data-label="Amount" scope="col">3,000</td>
+                                                <td data-label="Pay" scope="col"><button class="btn btn-primary" style="padding: 5px 35px;">Pay</button></td>
                                             </tr>
                                             <tr>
-                                                <td data-label="Student Name" scope="col">Student Name</td>
-                                                <td data-label="Qouta" scope="col">50 Session/s</td>
-                                                <td data-label="Used" scope="col">30 Session/s</td>
-                                                <td data-label="Remain" scope="col">20 Session/s</td>
-                                                <td data-label="Status" scope="col">Active</td>
+                                                <td data-label="Description" scope="col">Description</td>
+                                                <td data-label="Date" scope="col">20/10/2022</td>
+                                                <td data-label="Amount" scope="col">3,000</td>
+                                                <td data-label="Pay" scope="col"><button class="btn btn-primary" style="padding: 5px 35px;">Pay</button></td>
                                             </tr>
                                             <tr>
-                                                <td data-label="Student Name" scope="col">Student Name</td>
-                                                <td data-label="Qouta" scope="col">50 Session/s</td>
-                                                <td data-label="Used" scope="col">30 Session/s</td>
-                                                <td data-label="Remain" scope="col">20 Session/s</td>
-                                                <td data-label="Status" scope="col">Active</td>
+                                                <td data-label="Description" scope="col">Description</td>
+                                                <td data-label="Date" scope="col">20/10/2022</td>
+                                                <td data-label="Amount" scope="col">3,000</td>
+                                                <td data-label="Pay" scope="col"><button class="btn btn-primary" style="padding: 5px 35px;">Pay</button></td>
                                             </tr>
                                             <tr>
-                                                <td data-label="Student Name" scope="col">Student Name</td>
-                                                <td data-label="Qouta" scope="col">50 Session/s</td>
-                                                <td data-label="Used" scope="col">30 Session/s</td>
-                                                <td data-label="Remain" scope="col">20 Session/s</td>
-                                                <td data-label="Status" scope="col">Active</td>
+                                                <td data-label="Description" scope="col">Description</td>
+                                                <td data-label="Date" scope="col">20/10/2022</td>
+                                                <td data-label="Amount" scope="col">3,000</td>
+                                                <td data-label="Pay" scope="col"><button class="btn btn-primary" style="padding: 5px 35px;">Pay</button></td>
                                             </tr>
+                                            <tr>
+                                                <td data-label="Description" scope="col">Description</td>
+                                                <td data-label="Date" scope="col">20/10/2022</td>
+                                                <td data-label="Amount" scope="col">3,000</td>
+                                                <td data-label="Pay" scope="col"><button class="btn btn-primary" style="padding: 5px 35px;">Pay</button></td>
+                                            </tr>
+                                       
 
                                         </tbody>
                                     </table>
+                                    <button class="btn btn-success btn-lg pay-btn">Pay once</button>
+                                    <nav aria-label="..." class="pagination-center">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item ">
+                                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
 
                             </div>
